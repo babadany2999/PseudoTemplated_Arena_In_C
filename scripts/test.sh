@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+LIBRARY_NAME="DynamicAllocator"
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
@@ -27,7 +29,7 @@ g++-14 -I"$GTEST_DIR/googletest" \
     -c "$GTEST_DIR/googletest/src/gtest_main.cc" \
     -o "$BUILD_DIR/gtest/gtest_main.o"
 
-echo "Building your library..."
+echo "Building ${LIBRARY_NAME} library..."
 
 SRC_FILES=$(find source -name "*.c")
 
