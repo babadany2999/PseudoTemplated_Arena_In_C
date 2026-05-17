@@ -16,13 +16,13 @@ GTEST_SRC_DIR="$GTEST_DIR/googletest/src"
 mkdir -p "$BUILD_DIR/gtest"
 
 # gtest core
-g++ -I"$GTEST_DIR/googletest" \
+g++-14 -I"$GTEST_DIR/googletest" \
     -I"$GTEST_DIR/googletest/include" \
     -c "$GTEST_DIR/googletest/src/gtest-all.cc" \
     -o "$BUILD_DIR/gtest/gtest.o"
 
 # gtest main (provides main())
-g++ -I"$GTEST_DIR/googletest" \
+g++-14 -I"$GTEST_DIR/googletest" \
     -I"$GTEST_DIR/googletest/include" \
     -c "$GTEST_DIR/googletest/src/gtest_main.cc" \
     -o "$BUILD_DIR/gtest/gtest_main.o"
@@ -35,7 +35,7 @@ OBJ_FILES=""
 
 for src in $SRC_FILES; do
     obj="$BUILD_DIR/$(basename "${src%.c}.o")"
-    gcc  -Wall -Wextra -Werror -std=c23 -Iinclude -c "$src" -o "$obj"
+    gcc-14  -Wall -Wextra -Werror -std=c23 -Iinclude -c "$src" -o "$obj"
     OBJ_FILES="$OBJ_FILES $obj"
 done
 
@@ -47,7 +47,7 @@ for test in $TEST_FILES; do
     name=$(basename "$test" .cpp)
     bin="$BUILD_DIR/$name"
 
-    g++ -Wall -Wextra -Werror -Iinclude \
+    g++-14 -Wall -Wextra -Werror -Iinclude \
         -std=c++23 \
         -I"$GTEST_DIR/googletest/include" \
         -I"$ROOT_DIR/source" \
