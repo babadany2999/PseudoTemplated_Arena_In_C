@@ -1,6 +1,6 @@
 # C23 X-Macro Dynamic Allocator (Practice Project)
 
-[![Test CI](https://github.com/your-username/your-repo/actions/workflows/test.yaml/badge.svg)](https://github.com/babadany2999/PseudoTemplated_Arena_In_C/test)
+[![Test CI](https://github.com/your-username/your-repo/actions/workflows/test.yaml/badge.svg)](https://github.com/babadany2999/PseudoTemplated_Arena_In_C/actions/workflows/test.yaml)
 
 > ⚠️ **Disclaimer:** This is a personal learning project and sandbox. It is **not** intended for production use, and I don't recommend using it in real-world applications. It exists solely as an exercise to explore advanced C programming concepts and to serve as a portfolio piece.
 
