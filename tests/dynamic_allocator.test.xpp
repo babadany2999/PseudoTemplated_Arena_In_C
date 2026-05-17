@@ -1,0 +1,6 @@
+// Defined as: __TEST_DYNAMIC_ALLOCATOR_DEF(Name, Type, NameOfArrayContainingTestValues) 
+
+__TEST_DYNAMIC_ALLOCATOR_DEF(__Test_Int, int, __TEST_INT_MEMORY_ARR)
+__TEST_DYNAMIC_ALLOCATOR_DEF(__Test_Float, float, __TEST_FLOAT_MEMORY_ARR)
+__TEST_DYNAMIC_ALLOCATOR_DEF(__Test_Vector3, __Test_Vector3, __TEST_VECTOR3_MEMORY_ARR)
+__TEST_DYNAMIC_ALLOCATOR_DEF(__Test_PlayerData, __Test_PlayerData, __TEST_PLAYER_DATA_MEMORY_ARR)
